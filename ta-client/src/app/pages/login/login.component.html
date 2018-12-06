@@ -1,0 +1,77 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="wrapper wrapper-full-page">
+      <div class="page-header login-page header-filter" filter-color="black">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <!-- <h1 class="text-center mt-5 mb-2">Tecnologia em Atendimento</h1> -->
+              <img src="assets/img/logotipo-ta.png" class="logotipo" alt="Tecnologia em Atendimento">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6 ml-auto mr-auto">
+              <form class="form ng-untouched ng-pristine ng-valid" [formGroup]="f" (ngSubmit)="onSubmit()" novalidate>
+                <div class="card card-login">
+                  <div class="card-header card-header-danger text-center">
+                    <h4 class="card-title">Entrar</h4>
+                    <!-- <div class="social-line">
+                      <a class="btn btn-just-icon btn-link btn-white" href="#pablo">
+                        <i class="fa fa-facebook-square"></i>
+                      </a>
+                      <a class="btn btn-just-icon btn-link btn-white" href="#pablo">
+                        <i class="fa fa-twitter"></i>
+                      </a>
+                      <a class="btn btn-just-icon btn-link btn-white" href="#pablo">
+                        <i class="fa fa-google-plus"></i>
+                      </a>
+                    </div> -->
+                  </div>
+                  <div class="card-body ">
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert" *ngIf="errorCredentials">
+                      Usuário ou senha inválidos.
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <p class="card-description text-center">Faça o seu login</p><span class="bmd-form-group">
+                      <span *ngIf="f.controls['email'].invalid && (f.controls['email'].touched || f.controls['email'].dirty)">
+                        <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+                        <span class="text-danger">E-mail inválido.</span>
+                      </span>
+                      <div class="input-group" [ngClass]="{'has-success': f.controls['email'].valid,
+                      'has-error': f.controls['email'].invalid && (f.controls['email'].touched || f.controls['email'].dirty)}">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="material-icons">email</i>
+                          </span>
+                        </div>
+                        <input type="email" class="form-control" formControlName="email" id="InputEmail" placeholder="E-mail">
+                      </div>
+                    </span><span class="bmd-form-group">
+                      <div class="input-group" [ngClass]="{'has-success': f.controls['password'].valid,
+                      'has-error': f.controls['password'].invalid && (f.controls['password'].touched || f.controls['password'].dirty)}">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="material-icons">lock_outline</i>
+                          </span>
+                        </div>
+                        <input type="password" class="form-control" formControlName="password" id="InputPassword" placeholder="Senha">
+                        <span class="text-danger" *ngIf="f.controls['password'].invalid && (f.controls['password'].touched || f.controls['password'].dirty)">Senha obrigatória.</span>
+                      </div>
+                    </span>
+                  </div>
+                  <div class="card-footer justify-content-center">
+                    <button type="submit" class="btn btn-danger btn-lg" [disabled]="f.invalid">
+                      Entrar
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
