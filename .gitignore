@@ -1,0 +1,13 @@
+ta-client/node_modules/
+ta-client/__MACOSX/
+ta-api/node_modules
+ta-api/public/hot
+ta-api/public/storage
+ta-api/storage/*.key
+ta-api/vendor
+ta-api/.env
+ta-api/.phpunit.result.cache
+ta-api/Homestead.json
+ta-api/Homestead.yaml
+ta-api/npm-debug.log
+ta-api/yarn-error.log
